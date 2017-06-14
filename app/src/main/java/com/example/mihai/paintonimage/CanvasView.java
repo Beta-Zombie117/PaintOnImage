@@ -126,6 +126,13 @@ public class CanvasView extends View {
         return bmp;
     }
 
+//
+    // AUUUUU EUGEN !!!!!!!!!!!!!!!!!!!!!!
+//    trebu de facut metoda pentru ca sa se salveze imaginea pe sdcard/local/galerie
+//
+    //
+    ///
+
 
 
     }
