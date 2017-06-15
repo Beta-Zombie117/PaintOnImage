@@ -152,7 +152,7 @@ public class CanvasView extends View {
 
     }
 
-
+    //methods for setting the brush size!
     public void setStrokeSmall(){
         mPaint.setStrokeWidth(4f);
 
@@ -166,7 +166,31 @@ public class CanvasView extends View {
         mPaint.setStrokeWidth(16f);
 
     }
+    public void setStrokeXLarge(){
+        mPaint.setStrokeWidth(24f);
 
+    }
+    public void setStrokeXXLarge(){
+        mPaint.setStrokeWidth(32f);
+
+    }
+    public void setStrokeXXXLarge(){
+        mPaint.setStrokeWidth(64f);
+
+    }
+
+
+    //methods for changing brush style!
+    public void setBrushStyleStroke(){
+        mPaint.setStyle(Paint.Style.STROKE);
+    }
+    public void setBrushStyleFill(){
+        mPaint.setStyle(Paint.Style.FILL);
+    }
+    public void setBrushStyleFandS(){
+        mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
+
+    }
 
 //
     // AUUUUU EUGEN !!!!!!!!!!!!!!!!!!!!!!

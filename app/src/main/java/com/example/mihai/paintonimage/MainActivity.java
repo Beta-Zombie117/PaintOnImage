@@ -64,6 +64,31 @@ public class MainActivity extends AppCompatActivity {
     public void setStrokeLarge(View v){
         canvasView.setStrokeLarge();
     }
+    public void setStrokeXLarge(View v){
+        canvasView.setStrokeXLarge();
+    }
+    public void setStrokeXXLarge(View v){
+        canvasView.setStrokeXXLarge();
+    }
+    public void setStrokeXXXLarge(View v){
+        canvasView.setStrokeXXXLarge();
+    }
+
+
+
+    //methods for setting the brush style!
+    public void setBrushsStyleStroke(View v){
+        canvasView.setBrushStyleStroke();
+    }
+
+    public void setBrushStyleFill(View v){
+        canvasView.setBrushStyleFill();
+
+    }
+
+    public void setBrushsStyleFandS(View v){
+        canvasView.setBrushStyleFandS();
+    }
 
 
 

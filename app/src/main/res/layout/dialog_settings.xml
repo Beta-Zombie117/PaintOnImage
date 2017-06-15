@@ -130,7 +130,7 @@
         android:id="@+id/textView_size_options"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Brush Size:"
+        android:text="Brush Size(px): "
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textColor="@android:color/holo_red_light"
@@ -150,7 +150,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Small"
+            android:text="4"
             android:onClick="setStrokeSmall"
             tools:ignore="HardcodedText" />
 
@@ -159,7 +159,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Medium"
+            android:text="8"
             android:onClick="setStrokeMedium"
             tools:ignore="HardcodedText" />
 
@@ -168,11 +168,87 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Large"
+            android:text="16"
             android:onClick="setStrokeLarge"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/set_brush_XLarge"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="24"
+            android:onClick="setStrokeXLarge"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/set_brush_XXLarge"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="32"
+            android:onClick="setStrokeXXLarge"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/set_brush_XXXLarge"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="64"
+            android:onClick="setStrokeXXXLarge"
             tools:ignore="HardcodedText" />
 
 
     </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView_Stroke_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Brush Type:"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/holo_red_light"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <RadioGroup
+        android:id="@+id/dialog_subject4"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+
+        <RadioButton
+            android:id="@+id/set_brush_Stroke"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Stroke"
+            android:onClick="setBrushsStyleStroke"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/set_brush_Fill"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Fill"
+            android:onClick="setBrushStyleFill"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/set_brush_FS"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Fill+Stroke"
+            android:onClick="setBrushsStyleFandS"
+            tools:ignore="HardcodedText" />
+
+
+    </RadioGroup>
+
 
 </LinearLayout>
