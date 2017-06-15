@@ -34,7 +34,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setColorRed(View v){
+
         canvasView.setColorRed();
+
     }
     public void setColorGreen(View v){
         canvasView.setColorGreen();

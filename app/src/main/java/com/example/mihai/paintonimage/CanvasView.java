@@ -126,6 +126,8 @@ public class CanvasView extends View {
         return bmp;
     }
 
+
+    //methods for seting the brush colors
     public void setColorRed(){
         mPaint.setColor(Color.RED);
 
@@ -194,9 +196,10 @@ public class CanvasView extends View {
 
 //
     // AUUUUU EUGEN !!!!!!!!!!!!!!!!!!!!!!
-//    trebu de facut metoda pentru ca sa se salveze imaginea pe sdcard/local/galerie
-//
-    //
+// trebu de facut ca cand se scimba culoarea/marimea/brush-type sa se salveze tot ce a fost inainte nu sa se schimbe tot din nou !
+// trebu de facut metoda pentru ca sa se salveze imaginea pe sdcard/local/galerie!
+//      +  de inkarcat imaginea din galerie de scanat bitmapu si de incarcat in canvasView pentru a putea desena peste imagine!
+    //  +
     ///
 
 
