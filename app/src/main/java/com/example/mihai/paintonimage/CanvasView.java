@@ -126,6 +126,48 @@ public class CanvasView extends View {
         return bmp;
     }
 
+    public void setColorRed(){
+        mPaint.setColor(Color.RED);
+
+    }
+
+    public void setColorGreen(){
+        mPaint.setColor(Color.GREEN);
+
+    }
+    public void setColorBlue(){
+        mPaint.setColor(Color.BLUE);
+
+    }
+    public void setColorBlack(){
+        mPaint.setColor(Color.BLACK);
+
+    }
+    public void setColorCyan(){
+        mPaint.setColor(Color.CYAN);
+
+    }
+    public void setColorMagenta(){
+        mPaint.setColor(Color.MAGENTA);
+
+    }
+
+
+    public void setStrokeSmall(){
+        mPaint.setStrokeWidth(4f);
+
+    }
+
+    public void setStrokeMedium(){
+        mPaint.setStrokeWidth(8f);
+
+    }
+    public void setStrokeLarge(){
+        mPaint.setStrokeWidth(16f);
+
+    }
+
+
 //
     // AUUUUU EUGEN !!!!!!!!!!!!!!!!!!!!!!
 //    trebu de facut metoda pentru ca sa se salveze imaginea pe sdcard/local/galerie

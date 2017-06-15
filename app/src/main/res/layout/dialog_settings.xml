@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/textView_select_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Color:"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/holo_red_light"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <RadioGroup
+        android:id="@+id/dialog_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/set_col_red"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="setColorRed"
+            android:text="RED"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/set_col_green"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="setColorGreen"
+            android:text="GREEN"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/set_col_blue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="setColorBlue"
+            android:text="BLUE"
+            tools:ignore="HardcodedText" />
+
+
+
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/dialog_subject2"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+
+        <RadioButton
+            android:id="@+id/set_col_black"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="BLACK"
+            android:onClick="setColorBlack"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/set_col_cyan"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="CYAN"
+            android:onClick="setColorCyan"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/set_col_magenta"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="MAGENTA"
+            android:onClick="setColorMagenta"
+            tools:ignore="HardcodedText" />
+
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView_canvas_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Canvas Options:"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/holo_red_light"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <RadioGroup
+        android:id="@+id/dialog_canvas_options"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/button_clear_canvas"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Clear Canvas"
+            android:onClick="clearCanvas"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/button_save_image"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Save Image"
+            tools:ignore="HardcodedText" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView_size_options"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Brush Size:"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="@android:color/holo_red_light"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+
+    <RadioGroup
+        android:id="@+id/dialog_subject3"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+
+        <RadioButton
+            android:id="@+id/set_brush_small"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Small"
+            android:onClick="setStrokeSmall"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/brush_medium"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Medium"
+            android:onClick="setStrokeMedium"
+            tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/set_brush_large"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Large"
+            android:onClick="setStrokeLarge"
+            tools:ignore="HardcodedText" />
+
+
+    </RadioGroup>
+
+</LinearLayout>
