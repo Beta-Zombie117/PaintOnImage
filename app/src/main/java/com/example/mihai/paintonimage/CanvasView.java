@@ -154,6 +154,13 @@ public class CanvasView extends View {
 
     }
 
+    // method for setting the bitmap;
+
+    public void   setmCanvas(){
+        mCanvas = new Canvas(mBitmap);
+
+    }
+
     //methods for setting the brush size!
     public void setStrokeSmall(){
         mPaint.setStrokeWidth(4f);

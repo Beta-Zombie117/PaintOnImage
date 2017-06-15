@@ -131,6 +131,16 @@
             android:layout_height="wrap_content"
             android:text="Load Image"
             tools:ignore="HardcodedText" />
+
+        <RadioButton
+            android:id="@+id/button_take_image"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Take Image"
+            tools:ignore="HardcodedText" />
+
+
     </RadioGroup>
 
     <TextView
