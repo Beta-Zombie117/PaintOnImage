@@ -117,7 +117,7 @@
             tools:ignore="HardcodedText" />
 
         <RadioButton
-            android:id="@+id/button_save_image"
+            android:id="@+id/button_save_image1"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -137,8 +137,9 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Take Image"
-            tools:ignore="HardcodedText" />
+            android:text="Save Changes"
+            tools:ignore="HardcodedText"
+            android:onClick="saveChanges"/>
 
 
     </RadioGroup>

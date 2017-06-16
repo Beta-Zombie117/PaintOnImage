@@ -19,8 +19,9 @@ public class CanvasView extends View {
     private Canvas mCanvas;
     private Path mPath;
     private Paint mPaint;
+    private Paint   mBitmapPaint;
     private float mX, mY;
-    private static final float TOLERANCE = 5;
+    private static final float TOLERANCE = 4;
     Context context;
 
     public CanvasView(Context context, @Nullable AttributeSet attrs) {
@@ -28,6 +29,7 @@ public class CanvasView extends View {
         this.context = context;
 
         mPath = new Path();
+        mBitmapPaint = new Paint(Paint.DITHER_FLAG);
 
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
@@ -49,12 +51,14 @@ public class CanvasView extends View {
 
     @Override
     protected void onDraw(Canvas canvas) {
-        super.onDraw(canvas);
-
+        //super.onDraw(canvas);
+            canvas.drawBitmap(mBitmap, 0, 0, mBitmapPaint);
         canvas.drawPath(mPath, mPaint);
+
     }
 
     private void startTouch(float x, float y){
+        mPath.reset();
         mPath.moveTo(x, y);
         mX = x;
         mY =y;
@@ -71,22 +75,15 @@ public class CanvasView extends View {
         }
     }
 
-    public void clearCanvas(){
-
-        mPath.reset();
-        invalidate();
-    }
-
     private void upTouch(){
         mPath.lineTo(mX, mY);
         // commit the path to our offscreen
         mCanvas.drawPath(mPath, mPaint);
         // kill this so we don't double draw
-        mPath.reset();
+       // mPath.reset();
 
 
     }
-
 
     @Override
     public boolean onTouchEvent(MotionEvent event){
@@ -103,7 +100,7 @@ public class CanvasView extends View {
                 invalidate();
                 break;
             case MotionEvent.ACTION_UP:
-                moveTouch(x, y);
+                upTouch();
                 invalidate();
                 break;
 
@@ -125,6 +122,28 @@ public class CanvasView extends View {
 
         return bmp;
     }
+
+    public void clearCanvas(){
+
+        mPath.reset();
+        invalidate();
+        mBitmap.eraseColor(Color.WHITE);
+        invalidate();
+        System.gc();
+    }
+
+    public void saveChanges(){
+
+        invalidate();
+
+    }
+
+//    public void clear(){
+//        mBitmap.eraseColor(Color.WHITE);
+//        invalidate();
+//        System.gc();
+//
+//    }
 
 
     //methods for seting the brush colors
@@ -188,7 +207,6 @@ public class CanvasView extends View {
 
     }
 
-
     //methods for changing brush style!
     public void setBrushStyleStroke(){
         mPaint.setStyle(Paint.Style.STROKE);
@@ -201,13 +219,6 @@ public class CanvasView extends View {
 
     }
 
-//
-    // AUUUUU EUGEN !!!!!!!!!!!!!!!!!!!!!!
-// trebu de facut ca cand se scimba culoarea/marimea/brush-type sa se salveze tot ce a fost inainte nu sa se schimbe tot din nou !
-// trebu de facut metoda pentru ca sa se salveze imaginea pe sdcard/local/galerie!
-//      +  de inkarcat imaginea din galerie de scanat bitmapu si de incarcat in canvasView pentru a putea desena peste imagine!
-    //  +
-    ///
 
 
 
