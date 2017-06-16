@@ -146,7 +146,7 @@ public class CanvasView extends View {
 //    }
 
 
-    //methods for seting the brush colors
+
     public void setColorRed(){
         mPaint.setColor(Color.RED);
 
@@ -180,7 +180,7 @@ public class CanvasView extends View {
 
     }
 
-    //methods for setting the brush size!
+
     public void setStrokeSmall(){
         mPaint.setStrokeWidth(4f);
 
@@ -207,7 +207,6 @@ public class CanvasView extends View {
 
     }
 
-    //methods for changing brush style!
     public void setBrushStyleStroke(){
         mPaint.setStyle(Paint.Style.STROKE);
     }
