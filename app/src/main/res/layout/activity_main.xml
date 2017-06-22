@@ -17,34 +17,64 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
+        android:background="#ffffff"
         android:layout_below="@+id/button_save_image" />
 
 
     <Button
         android:id="@+id/button_save_image"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_marginBottom="-5dip"
+        android:layout_marginLeft="-5dip"
+        android:layout_marginRight="-5dip"
+        android:layout_marginTop="-5dip"
+        android:background="#6aaae2ac"
+        android:includeFontPadding="false"
+        android:padding="0dp"
         android:text="Save"
+        android:textStyle="bold"
         tools:ignore="HardcodedText" />
 
-    <!--<Button-->
-        <!--android:id="@+id/button2"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:text="Save"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_toEndOf="@+id/button" />-->
+    <Button
+        android:id="@+id/button_undo"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignBottom="@+id/button_color_palette"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
+        android:background="#6aaae2ac"
+        android:includeFontPadding="false"
+        android:padding="0dp"
+        android:text="UNDO"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
 
-    <!--<Button-->
-        <!--android:id="@+id/button_color_red"-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_toEndOf="@+id/button2"-->
-        <!--android:onClick="setColorRed"-->
-        <!--android:text="RED" />-->
+
+    <Button
+        android:id="@+id/button_color_palette"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerInParent="false"
+        android:layout_marginBottom="-5dip"
+        android:layout_marginLeft="-5dip"
+        android:layout_marginRight="-5dip"
+        android:layout_marginTop="-5dip"
+        android:background="#6aaae2ac"
+        android:includeFontPadding="false"
+        android:padding="0dp"
+        android:text="Color Palette"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+
 
 
 </RelativeLayout>

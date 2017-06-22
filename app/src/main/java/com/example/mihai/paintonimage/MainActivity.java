@@ -1,6 +1,7 @@
 package com.example.mihai.paintonimage;
 
 
+import android.content.Intent;
 import android.os.Environment;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
@@ -16,6 +17,8 @@ import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.SeekBar;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.view.View.MeasureSpec;
 import android.widget.Button;
@@ -26,11 +29,14 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
+import static android.R.attr.button;
 import static android.R.attr.data;
 
 public class MainActivity extends AppCompatActivity {
     public static final int CAMERA_REQUEST = 10;
     private static int RESULT_LOAD_IMAGE = 30;
+
+  public Button button_c_p;
 
 
     private CanvasView canvasView;
@@ -44,6 +50,20 @@ public class MainActivity extends AppCompatActivity {
     Bitmap mBitmap;
     Paint mPaint;
 
+
+    public void init(){
+        button_c_p = (Button) findViewById(R.id.button_color_palette);
+        button_c_p.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(MainActivity.this, Color_Palette_Activity.class);
+                startActivity(i);
+            }
+        });
+
+
+    }
 
     public void clearCanvas(View v) {
         canvasView.clearCanvas();
@@ -100,9 +120,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void saveChanges(View v) {
-        canvasView.saveChanges();
-    }
+//    public void undoChange(View v) {
+//        canvasView.undoChange();
+//    }
 
     //methods for setting the brush style!
     public void setBrushsStyleStroke(View v) {
@@ -123,9 +143,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        init();
+
 
         canvasView = (CanvasView) findViewById(R.id.canvas);
-
         Button radio_button_save = (Button) findViewById(R.id.button_save_image);
         radio_button_save.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -180,19 +201,25 @@ public class MainActivity extends AppCompatActivity {
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                     Toast.makeText(getApplicationContext(), "File error", Toast.LENGTH_SHORT).show();
-                } catch (IOException e) {
+                }
+                catch (IOException e) {
                     e.printStackTrace();
                     Toast.makeText(getApplicationContext(), "IO error", Toast.LENGTH_SHORT).show();
                 }
 
             }
         });
+
+
+
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_settings, menu);
+
+
 
         return super.onCreateOptionsMenu(menu);
     }
@@ -218,6 +245,8 @@ public class MainActivity extends AppCompatActivity {
 
             builder.create().show();
         }
+
+
         return super.onOptionsItemSelected(item);
     }
 

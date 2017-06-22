@@ -91,6 +91,10 @@
 
     </RadioGroup>
 
+
+
+
+
     <TextView
         android:id="@+id/textView_canvas_options"
         android:layout_width="match_parent"
@@ -119,8 +123,8 @@
         <RadioButton
             android:id="@+id/button_save_image1"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Save Image"
             tools:ignore="HardcodedText" />
 
@@ -137,9 +141,9 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Save Changes"
-            tools:ignore="HardcodedText"
-            android:onClick="saveChanges"/>
+            android:text="Redo Changes"
+            tools:ignore="HardcodedText" />
+            <!--android:onClick="undoChange"-->
 
 
     </RadioGroup>

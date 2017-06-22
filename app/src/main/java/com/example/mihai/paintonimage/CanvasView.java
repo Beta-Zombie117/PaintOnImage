@@ -6,6 +6,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
@@ -22,7 +23,12 @@ public class CanvasView extends View {
     private Paint   mBitmapPaint;
     private float mX, mY;
     private static final float TOLERANCE = 4;
+    private Paint argb;
     Context context;
+
+     public int red, green, blue;
+
+
 
     public CanvasView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
@@ -37,6 +43,8 @@ public class CanvasView extends View {
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeJoin(Paint.Join.ROUND);
         mPaint.setStrokeWidth(4f);
+
+
 
     }
 
@@ -132,11 +140,12 @@ public class CanvasView extends View {
         System.gc();
     }
 
-    public void saveChanges(){
-
-        invalidate();
-
-    }
+//    public void undoChange(){
+//        mPath.();
+//        invalidate();
+//
+//
+//    }
 
 //    public void clear(){
 //        mBitmap.eraseColor(Color.WHITE);
@@ -172,6 +181,9 @@ public class CanvasView extends View {
         mPaint.setColor(Color.MAGENTA);
 
     }
+
+
+
 
     // method for setting the bitmap;
 
@@ -219,7 +231,26 @@ public class CanvasView extends View {
     }
 
 
+    public void setColor(int argb) {
 
-
+        red = 100;
+        green = 100;
+        blue = 100;
+        mPaint.setColor(Color.argb(255, red, green, blue));
     }
+
+    //    public void setColor(int a, int r,int g, int b) {
+//
+//        a = 255;
+//        mPaint.setColor(Color.argb(a, r, g, b));
+//    }
+//    public void setColorRGB(){
+//        mPaint.setColor(Color.color);
+//
+//    }
+
+
+
+
+}
 
