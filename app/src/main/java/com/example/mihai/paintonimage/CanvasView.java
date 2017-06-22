@@ -40,6 +40,7 @@ public class CanvasView extends View {
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
         mPaint.setColor(Color.BLACK);
+        mPaint.setStrokeCap(Paint.Cap.BUTT);
         mPaint.setStyle(Paint.Style.STROKE);
         mPaint.setStrokeJoin(Paint.Join.ROUND);
         mPaint.setStrokeWidth(4f);
@@ -182,6 +183,18 @@ public class CanvasView extends View {
 
     }
 
+    public void setColorYellow(){
+        mPaint.setColor(Color.YELLOW);
+
+    }
+    public void setColorGray(){
+        mPaint.setColor(Color.GRAY);
+
+    }
+    public void setColorWhite(){
+        mPaint.setColor(Color.WHITE);
+
+    }
 
 
 
@@ -229,6 +242,19 @@ public class CanvasView extends View {
         mPaint.setStyle(Paint.Style.FILL_AND_STROKE);
 
     }
+
+
+    public void setCapStyleButt(){
+        mPaint.setStrokeCap(Paint.Cap.BUTT);
+    }
+    public void setCapStyleRound(){
+        mPaint.setStrokeCap(Paint.Cap.ROUND);
+    }
+    public void setCapStyleSquare(){
+        mPaint.setStrokeCap(Paint.Cap.SQUARE);
+    }
+
+
 
 
     public void setColor(int argb) {

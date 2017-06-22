@@ -50,8 +50,9 @@
         android:layout_marginTop="0dp"
         android:background="#6aaae2ac"
         android:includeFontPadding="false"
+        android:onClick="clearCanvas"
         android:padding="0dp"
-        android:text="UNDO"
+        android:text="Clear"
         android:textStyle="bold"
         tools:ignore="HardcodedText" />
 
@@ -67,7 +68,7 @@
         android:layout_marginLeft="-5dip"
         android:layout_marginRight="-5dip"
         android:layout_marginTop="-5dip"
-        android:background="#6aaae2ac"
+        android:background="#6ae43048"
         android:includeFontPadding="false"
         android:padding="0dp"
         android:text="Color Palette"

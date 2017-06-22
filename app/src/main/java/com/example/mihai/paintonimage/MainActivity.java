@@ -94,6 +94,20 @@ public class MainActivity extends AppCompatActivity {
         canvasView.setColorMagenta();
     }
 
+    public void setColorYellow(View v) {
+        canvasView.setColorYellow();
+    }
+
+    public void setColorGray(View v) {
+        canvasView.setColorGray();
+    }
+
+    public void setColorWhite(View v) {
+        canvasView.setColorWhite();
+    }
+
+
+
     //-the methods for stroke size!!!
     public void setStrokeSmall(View v) {
         canvasView.setStrokeSmall();
@@ -137,6 +151,19 @@ public class MainActivity extends AppCompatActivity {
     public void setBrushsStyleFandS(View v) {
         canvasView.setBrushStyleFandS();
     }
+
+    public void setCapStyleButt(View v){
+        canvasView.setCapStyleButt();
+    }
+    public void setCapStyleRound(View v){
+        canvasView.setCapStyleRound();
+    }
+    public void setCapStyleSquare(View v){
+     canvasView.setCapStyleSquare();
+    }
+
+
+
 
 
     @Override
