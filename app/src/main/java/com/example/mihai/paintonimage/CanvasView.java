@@ -133,7 +133,6 @@ public class CanvasView extends View {
     }
 
     public void clearCanvas(){
-
         mPath.reset();
         invalidate();
         mBitmap.eraseColor(Color.WHITE);
@@ -144,24 +143,21 @@ public class CanvasView extends View {
 //    public void undoChange(){
 //        mPath.();
 //        invalidate();
-//
-//
 //    }
+
 
 //    public void clear(){
 //        mBitmap.eraseColor(Color.WHITE);
 //        invalidate();
 //        System.gc();
-//
 //    }
 
 
-
+//-setarea culorilor de baza.
     public void setColorRed(){
         mPaint.setColor(Color.RED);
 
     }
-
     public void setColorGreen(){
         mPaint.setColor(Color.GREEN);
 
@@ -182,7 +178,6 @@ public class CanvasView extends View {
         mPaint.setColor(Color.MAGENTA);
 
     }
-
     public void setColorYellow(){
         mPaint.setColor(Color.YELLOW);
 
@@ -196,16 +191,14 @@ public class CanvasView extends View {
 
     }
 
-
-
-    // method for setting the bitmap;
-
+    // metoda pentru setarea unui canvas nou.
+    // +treb de facut imaginea--> mBitmap
     public void   setmCanvas(){
         mCanvas = new Canvas(mBitmap);
 
     }
 
-
+//metodele pentru setarea marimii pensulei.
     public void setStrokeSmall(){
         mPaint.setStrokeWidth(4f);
 
@@ -231,7 +224,7 @@ public class CanvasView extends View {
         mPaint.setStrokeWidth(64f);
 
     }
-
+//metodele pentru setarea stilului liniei.
     public void setBrushStyleStroke(){
         mPaint.setStyle(Paint.Style.STROKE);
     }
@@ -243,7 +236,7 @@ public class CanvasView extends View {
 
     }
 
-
+//metodele pentru setarea stilului pensulei.
     public void setCapStyleButt(){
         mPaint.setStrokeCap(Paint.Cap.BUTT);
     }
@@ -255,8 +248,7 @@ public class CanvasView extends View {
     }
 
 
-
-
+    //o invocam in clasa paletei pentru a seta culoarea speciala.
     public void setColor(int argb) {
 
         red = 100;
@@ -274,9 +266,6 @@ public class CanvasView extends View {
 //        mPaint.setColor(Color.color);
 //
 //    }
-
-
-
 
 }
 

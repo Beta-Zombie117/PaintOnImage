@@ -143,15 +143,16 @@
     <RadioGroup
         android:id="@+id/dialog_canvas_options"
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <RadioButton
             android:id="@+id/button_clear_canvas"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Clear Canvas"
+            android:layout_weight="1"
             android:onClick="clearCanvas"
+            android:text="Clear Canvas"
             tools:ignore="HardcodedText" />
 
         <RadioButton
@@ -165,19 +166,19 @@
         <RadioButton
             android:id="@+id/button_load_image"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="Load Image"
             tools:ignore="HardcodedText" />
 
         <RadioButton
             android:id="@+id/button_take_image"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:text="Redo Changes"
-            tools:ignore="HardcodedText" />
-            <!--android:onClick="undoChange"-->
+            android:layout_weight="1"
+            tools:ignore="HardcodedText"
+            android:text="Undo Change " />
+        <!--android:onClick="undoChange"-->
 
 
     </RadioGroup>
